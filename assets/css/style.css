@@ -1,0 +1,47 @@
+.text-theme{
+    color: #33C1D5;
+}
+
+.bg-navbar{
+    background-color: #F3F2F9;
+}
+
+.btn-color-theme{
+    color: white !important;
+    background-color: #33C1D5;
+}
+
+.btn-color-theme:hover{
+    background-color: #33C1D5;
+}
+
+.btn-outline-theme{
+    color: #33C1D5 !important;
+    border: 1px solid #33C1D5;
+}
+
+.btn-outline-theme:hover{
+    color: white !important;
+    background-color: #33C1D5;
+}
+
+.border-radius-10{
+    border-radius: 10px;
+}
+
+.bg-theme{
+    background-color: #fbfcfd;
+}
+
+
+
+@media(max-width: 989px){
+   .navbar-collapse{
+       margin-top: 38px;
+       margin-bottom: 30px;
+   }
+
+   .navbar-nav .btn-outline-theme{
+       margin-top: 10px;
+   }
+}
