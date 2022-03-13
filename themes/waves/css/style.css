@@ -1,0 +1,119 @@
+
+.font-theme{
+   font-family: Allura;
+    font-weight: 600;
+ 
+}
+
+.btn-theme{
+    color: white!important;
+    background-color: #33C1D5;
+    border: 1px solid #33C1D5;
+}
+.ocean { 
+  height: 5%;
+  width:100%;
+  position:absolute;
+  bottom:0;
+  left:0;
+  background: #015871;
+}
+
+body{
+  overflow-x: hidden;
+}
+
+.wave {
+  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/85486/wave.svg) repeat-x; 
+  position: absolute;
+  top: -198px;
+  width: 6400px;
+  height: 198px;
+  animation: wave 7s cubic-bezier( 0.36, 0.45, 0.63, 0.53) infinite;
+  transform: translate3d(0, 0, 0);
+}
+
+.wave:nth-of-type(2) {
+  top: -175px;
+  animation: wave 7s cubic-bezier( 0.36, 0.45, 0.63, 0.53) -.125s infinite, swell 7s ease -1.25s infinite;
+  opacity: 1;
+}
+
+@keyframes wave {
+  0% {
+    margin-left: 0;
+  }
+  100% {
+    margin-left: -1600px;
+  }
+}
+
+@keyframes swell {
+  0%, 100% {
+    transform: translate3d(0,-25px,0);
+  }
+  50% {
+    transform: translate3d(0,5px,0);
+  }
+}
+
+/* MUTE BUTTON */
+.floatmute{
+	position:fixed;
+	width:40px;
+	height:40px;
+	top:25px;
+	right:25px;
+	color:#FFF;
+	border-radius:50px;
+	text-align:center;
+	background:rgba(50, 85, 168, 0.5);
+  	font-size:20px;
+  	z-index:100;
+}
+.my-float{
+	margin-top:10px;
+}
+
+.fh5co-cover {
+  height: 900px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  width: 100%;
+}
+
+.fh5co-cover .overlay {
+  z-index: 0;
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.fh5co-cover .h1-theme{
+  font-size: 100px;
+}
+
+.fh5co-cover h2{
+  font-family: Aramis;
+}
+
+@media screen and (max-width: 768px) {
+  .fh5co-cover {
+    height: 700px;
+  }
+}
+
+@font-face {
+   font-family: Allura;
+   src: url(Allura-Regular.ttf);
+}
+
+@font-face {
+  font-family: Aramis;
+  src: url(aramis.ttf);
+}
+

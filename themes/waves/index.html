@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="/assets/vendors/fontawesome-free-6.0.0-web/css/all.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/tachyons@4.9.1/css/tachyons.min.css" />
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <title>Hello, world!</title>
+</head>
+
+<style>
+    #splashscreen {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background: radial-gradient(ellipse at center, rgba(255, 254, 234, 1) 0%, rgba(255, 254, 234, 1) 35%, #B7E8EB 100%);
+        overflow: hidden;
+    }
+</style>
+
+<body>
+
+    <audio loop="" src="/assets/users/Here's Your Perfect - Jamie Miller (Lirik Lagu Terjemahan).mp3" id="audio"
+        autoplay>
+    </audio>
+    <!-- 
+    <div id="splashscreen">
+        <div class="position-absolute top-50 start-50 translate-middle" data-aos="fade-up" data-aos-delay="300">
+            <p class="text-center">The Wedding Of</p>
+            <h1 class="font-theme">Haris & Rachel</h1>
+            <p class="text-center font-theme">06 - 06 - 2021</p>
+            <div class="d-flex justify-content-center" onclick="return OpenInvitation();">
+                <button class=" btn btn-theme"><i class="fa-solid fa-circle-heart"></i>Buka
+                    Undangan</button>
+            </div>
+        </div>
+    </div> -->
+
+    <div id="page">
+        <header id="fh5co-header" class="fh5co-cover" role="banner" style="background-image:url(/assets/users/eugenivy_now-1Bs2sZ9fD2Q-unsplash.jpg);   background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;">
+            <div class="overlay"></div>
+            <div class="position-absolute top-50 start-50 translate-middle" data-aos="fade-up" data-aos-delay="300">
+                <h1 class="font-theme text-white h1-theme text-center">Haris & Rachel</h1>
+                <h2 class="text-white text-center">We Are Getting Married</h2>
+
+            </div>
+            <div class="ocean">
+                <div class="wave"></div>
+                <div class="wave"></div>
+            </div>
+        </header>
+
+        <section class="couple container mt-5">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card text-start|center|end">
+                        <img class="card-img-top" src="holder.js/100px180/" alt="">
+                        <div class="card-body">
+                            <h4 class="card-title">Title</h4>
+                            <p class="card-text">Body</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card text-start|center|end">
+                        <img class="card-img-top" src="holder.js/100px180/" alt="">
+                        <div class="card-body">
+                            <h4 class="card-title">Title</h4>
+                            <p class="card-text">Body</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- MUTE BUTTON -->
+        <a id="mute" href="#/" onclick="mute()" class="floatmute">
+            <i color="#fff" class="fa fa-volume-up my-float"></i>
+        </a>
+        <!-- MUTE BUTTON -->
+    </div>
+    <script type="text/javascript">
+        function OpenInvitation() {
+            $("#splashscreen").fadeOut(1000);
+            $("#page").fadeIn(1000);
+            var audio = document.getElementById("audio");
+            audio.play();
+        }
+    </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function (event) {
+            var audio = document.getElementById("audio");
+            var button = document.getElementById('mute');
+            if (+localStorage.getItem('mute')) {
+                audio.muted = true;
+                button.innerHTML = '<i color="#000" class="fa fa-volume-off my-float"></i>';
+            } else {
+                audio.volume = 0.9;
+            }
+        })
+        function mute() {
+            var audio = document.getElementById('audio');
+            var button = document.getElementById('mute');
+            let isMute = +localStorage.getItem('mute');
+            if (!isMute) {
+                audio.muted = true;
+                button.innerHTML = '<i color="#000" class="fa fa-volume-off my-float"></i>';
+                localStorage.setItem('mute', 1);
+            } else {
+                audio.muted = false;
+                audio.volume = 0.9;
+                button.innerHTML = '<i color="#fff" class="fa fa-volume-up my-float"></i>';
+                localStorage.setItem('mute', 0);
+            }
+        }
+    </script>
+
+    <script>
+        AOS.init();
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</body>
+
+</html>
